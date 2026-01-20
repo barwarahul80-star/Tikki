@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>Your Name</h2>
+        <ul>
+            <li>Bio</li>
+            <li>Projects</li>
+            <li>Skills</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>
+<ul>
+<li><a href="/bio">Bio</a></li>
+<li><a href="/skills">Skills</a></li>
+<li><a href="/projects">Projects</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>

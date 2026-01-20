@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero">
+
+    <div class="left">
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" class="profile-img">
+        <h1>Your Name</h1>
+        <p>Fresher | Web Developer</p>
+
+        <div class="social">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </div>
+
+    <div class="right">
+        <h2>About Me</h2>
+        <p>
+            I am a fresher passionate about Web Development using
+            HTML, CSS, Python and Flask. I love building clean and
+            responsive websites.
+        </p>
+
+        <h2>Education</h2>
+        <ul>
+            <li>BSc Computer Science – 2025</li>
+            <li>XYZ College / University</li>
+        </ul>
+
+        <h2>Technical Skills</h2>
+        <div class="skills">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>Python</span>
+            <span>Flask</span>
+            <span>Git</span>
+        </div>
+
+        <button class="cv-btn">Download CV</button>
+    </div>
+
+</section>
+{% endblock %}
