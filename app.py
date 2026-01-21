@@ -1,33 +1,23 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+    return render_template("index.html")
 
-@app.route('/')
-def home():
-return render_template('index.html')
-
-
-@app.route('/bio')
-def bio():
-return render_template('bio.html')
-
-
-@app.route('/skills')
-def skills():
-return render_template('skills.html')
-
-
-@app.route('/projects')
-def projects():
-return render_template('projects.html')
-
-
-@app.route('/contact')
+@app.route("/contact", methods=["POST"])
 def contact():
-return render_template('contact.html')
+    name = request.form.get("name")
+    email = request.form.get("email")
+    message = request.form.get("message")
 
+    # For now just print (later you can save to DB or email)
+    print("Name:", name)
+    print("Email:", email)
+    print("Message:", message)
 
-if __name__ == '__main__':
-app.run(debug=True)
+    return redirect(url_for("index"))
+
+if __name__ == "__main__":
+    app.run(debug=True)
