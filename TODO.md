@@ -1,10 +1,6 @@
-# Portfolio Website Fix and Enhancement Plan
+# TODO for Portfolio Code Corrections
 
-## Tasks
-- [x] Fix base.html: Correct nav structure and add proper anchor links for single-page navigation
-- [x] Update index.html: Combine all content (hero, about, skills, projects, contact) into sections with IDs
-- [x] Enhance static/css/style.css: Add Google Fonts (Poppins), improve design, add hover effects, make responsive
-- [x] Test the site locally to ensure functionality
-
-## Progress
-- All tasks completed successfully
+- [x] Add contact form to templates/index.html in the contact section
+- [x] Update app.py to import flash and add flash message after form submission
+- [ ] Update LinkedIn link in templates/index.html to a real one (if available)
+- [x] Test the app by running it
